@@ -11,12 +11,11 @@
 
 @property NSMutableDictionary* requestDict;
 @property NSMutableDictionary* responseDict;
+@property dispatch_queue_t serialQueue;
 
 + (id)sharedManager;
 
 - (void)recordRequest:(NSURLRequest*)request forReqId:(NSString*)reqId;
 - (void)recordResponse:(NSURLResponse*) response withData:(NSData*)data withError:(NSError*)error forReqId:(NSString*)reqId forResId:(NSString*)resId;
-
-
 
 @end
